@@ -8,6 +8,26 @@
 ![image](pic/logcat.png)
 
 
+## 用法
+
+1. 在你的项目根目录下的build.gradle文件添加下面一行代码
+
+```
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' } // 添加这一行
+        }
+    }
+```
+
+2. 在你的应用模块下的build.gradle添加依赖
+
+```
+    dependencies {
+	    implementation 'com.github.cjztool:CLog:v1.0.0'
+	}
+```
 
 ### 支持
 
