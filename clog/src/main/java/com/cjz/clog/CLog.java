@@ -20,8 +20,19 @@ public class CLog {
 
     private static final String TAG = CLog.class.getName();
 
+    private static String logPath;
+
+    public static void logFilePath(String path){
+        if(TextUtils.isEmpty(path)){
+            logPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        }
+        logPath = path;
+
+    }
+
     static String getLogPath() {
-        return Environment.getExternalStorageDirectory().getAbsolutePath();
+        logFilePath(logPath);
+        return logPath;
     }
 
 
