@@ -1,14 +1,14 @@
 # CLog
 一个Android日志辅助工具,可在IDE中控制台单击日志快速跳转到所在代码处,支持Android Studio 和Eclipse.
 
-## 如图
+### 如图
 
 ![image](pic/code.png)
 
 ![image](pic/logcat.png)
 
 
-## 用法
+### 用法
 
 1. 在你的项目根目录下的build.gradle文件添加下面一行代码
 
@@ -25,8 +25,8 @@
 
 ```
     dependencies {
-	    implementation 'com.github.cjztool:CLog:v1.0.0'
-	}
+        implementation 'com.github.cjztool:CLog:v1.0.0' // 添加这一行
+    }
 ```
 
 ### 支持
