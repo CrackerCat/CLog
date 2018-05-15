@@ -19,9 +19,11 @@
 ### 说明
  增加日志写文件操作,默认写入到以当前时间yyyy-MM-dd_HH.txt命名的 *主日志* 文件中.
 
-1. *CLog.f( )* 用于将日志写入文件,主日志文件.
-2. *CLog.fTagAsLogFileName( )* 用于提取某个tag的日志,并将日志写入以Tag前缀+时间命名的文件中.
-3. *CLog.vt( )* 用于输出打印日志时当前所处线程信息.
+1. *CLog.logFilePath(String path)* 用于设置日志文件路径，默认为sd卡根路径下
+2. *CLog.f( )* 用于将日志写入文件,主日志文件.
+3. *CLog.fTagAsLogFileName( )* 用于提取某个tag的日志,并将日志写入以Tag前缀+时间命名的文件中.
+4. *CLog.vt( )* 用于输出打印日志时当前所处线程信息.
+5. *CLog.setIdeIsEclipse(boolean b)* 用于设置当前IDE是不是Eclipse, 默认为false,即Android Studio
 
 ---
 - 如果需要支持eclipse,请打开对应代码的注释

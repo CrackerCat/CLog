@@ -22,6 +22,12 @@ public class CLog {
 
     private static String logPath;
 
+    private static boolean ideIsEclipse = false;
+
+    public static void setIdeIsEclipse(boolean b){
+        ideIsEclipse = b;
+    }
+
     public static void logFilePath(String path){
         if(TextUtils.isEmpty(path)){
             logPath = Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -48,10 +54,13 @@ public class CLog {
                         Class<?> clazz = Class.forName(trace.getClassName());
 
                         //eclipse下点击日志跳转到代码行
-                        // return "at (" + getClassName(clazz) + ".java:" + trace.getLineNumber() + ") " + trace.getMethodName() + "():";
+                        if(ideIsEclipse){
+                             return "at (" + getClassName(clazz) + ".java:" + trace.getLineNumber() + ") " + trace.getMethodName() + "():";
+                        }else{
+                            //android studio下点击日志跳转到代码行
+                            return "at " + trace.getClassName() + "." + trace.getMethodName() + "(" + getClassName(clazz) + ".java:" + trace.getLineNumber() + ") :";
+                        }
 
-                        //android studio下点击日志跳转到代码行
-                        return "at " + trace.getClassName() + "." + trace.getMethodName() + "(" + getClassName(clazz) + ".java:" + trace.getLineNumber() + ") :";
                     }
                 } else if (trace.getClassName().startsWith(className)) {
                     found = true;
