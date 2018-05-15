@@ -26,5 +26,4 @@
 5. *CLog.setIdeIsEclipse(boolean b)* 用于设置当前IDE是不是Eclipse, 默认为false,即Android Studio
 
 ---
-- 如果需要支持eclipse,请打开对应代码的注释
 - 更多优化待续...
