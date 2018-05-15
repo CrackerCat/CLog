@@ -1,6 +1,14 @@
 # CLog
 一个Android日志辅助工具,可在IDE中控制台单击日志快速跳转到所在代码处,支持Android Studio 和Eclipse.
 
+## 如图
+
+![image](pic/code.png)
+
+![image](pic/logcat.png)
+
+
+
 ### 支持
 
 - 支持单击控制台日志跳转源码
